@@ -3,6 +3,6 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 <<<<<<< HEAD
 
 =======
-Testing from Alessandra
+Testing from Alessandra try number 2
 Testing from Victoria
 >>>>>>> f99d0721ccbc02f41c17486c13c52f3193c6ab94
