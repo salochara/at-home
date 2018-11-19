@@ -11,9 +11,12 @@
 
 <h3>Events <%=@user.name%> is attending</h3>
 <ul>
-  <% @user.attending_events.each do |event| %>
+  <% @user.attending_events.each do |attending_event| %>
     <li>
-      <%= event.title %>
+      <% Reservation.where(user: current_user, event: attending_event).each do |reservation| %>
+      <%= reservation.event.title %>
+      <%= link_to 'Delete', reservation_path(reservation), method: :delete, data: {confirm: "Are you sure?"} %>
     </li>
+    <% end %>
   <% end %>
 </ul>
