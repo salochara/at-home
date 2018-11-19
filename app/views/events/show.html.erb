@@ -1,1 +1,9 @@
 <%= @event.title %>
+
+<% event_id_url = Event.find(params[:id]) %>
+<% if current_user.attending_events.include? event_id_url %>
+  <p>You've joined this event</p>
+<% else %>
+  <%= link_to 'Join', event_reservations_path(@event), method: :post %>
+
+<% end %>
