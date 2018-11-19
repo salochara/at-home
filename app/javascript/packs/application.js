@@ -1,4 +1,6 @@
 import "bootstrap";
+import { loadDynamicBannerText } from 'components/banner-text';
 import { initSlider } from '../components/card';
-console.log('Hello Victoria')
 initSlider();
+loadDynamicBannerText();
+
