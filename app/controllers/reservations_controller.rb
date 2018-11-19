@@ -11,4 +11,12 @@ class ReservationsController < ApplicationController
     end
   end
 
+  def destroy
+    @reservation = Reservation.find(params[:id])
+    authorize @reservation
+    @reservation.destroy
+    redirect_to user_path(current_user)
+
+  end
+
 end
