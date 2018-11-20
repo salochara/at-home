@@ -5,14 +5,18 @@
   <div class="grid">
   <div class="showcard">
     <div class="cardcontent">
-       <img src="https://images.unsplash.com/photo-1505932049984-db368d92fa63?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=729459afb3c7452a47ede6aca96dcc6c&auto=format&fit=crop&w=676&q=80" alt="" class="showimg">
+      <div class="showimg">
+        <%= cl_image_tag(@event.photo)%>
+      </div>
+
+       <!-- <img src= <%= @event.photo %>alt="" class="showimg"> -->
     </div>
   </div>
  <div class="grid-2">
   <div class="showcard">
     <div class="cardcontent">
-      <h1> Italian Dinner </h1>
-      <p> Tel Aviv </p>
+      <h1> <%= @event.title %> </h1>
+      <p> <%= @event.location %> </p>
       <p> December 15th, 2018 </p>
         <% event_id_url = Event.find(params[:id]) %>
         <% if current_user.attending_events.include? event_id_url %>
@@ -25,7 +29,7 @@
   </div>
   <div class="showcard">
     <div class="cardcontent">
-      <p> Thank you for your interest in our dinner! We are very much looking forward to meeting you. We will have all the fixings including lots of vino :) If you are a cheese nut, we got you covered with parmigiano and mozarella cheese. If you are vegan, no worries, we have gluten free pasta. </p>
+      <p> Thank you for your interest in our dinner! We are very much looking forward to meeting you. We will have all the fixings including lots of vino. </p>
     </div>
   </div>
   </div>
