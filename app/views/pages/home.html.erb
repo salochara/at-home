@@ -1,3 +1,20 @@
 <%= render 'shared/banner' %>
 
-<%=  render 'shared/card' %>
+<section>
+  <div class="gallery-container">
+    <div class="gallery">
+      <%  @events.each do |event|%>
+      <div class="col-sm-4">
+
+        <%= render event %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+</section>
+
+
+<% 10.times do %>
+  <p>HEEEELOOOOOOOOO</p>
+<% end %>
