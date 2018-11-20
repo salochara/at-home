@@ -127,6 +127,7 @@ event_attirbutes = [
     date: "01/03/2018",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/lee-myungseong-716836-unsplash.jpg",
     description: "Come to our BBQ party! The best BBQ in Tel Aviv"
+
   },
    {
     title: "Vietnamese Food Night",
@@ -163,6 +164,7 @@ event_attirbutes = [
     date: "19/11/2018",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/rawpixel-754045-unsplash_1.jpg",
     description: "For sure.. the best tacos you'll ever have!"
+
   },
   {
     title: "Israeli night",
