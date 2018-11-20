@@ -138,16 +138,40 @@ event_attirbutes = [
     description: "Come to our Vietnamese Food Night! We have the best Pho in town"
   },
   {
-
+    title: "Chinese Food Night",
+    capacity: 7,
+    location: "Shanghai",
+    user: User.order("RANDOM()").first,
+    date: "15/10/2018",
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/rawpixel-754045-unsplash_1.jpg",
+    description: "Come to our Chinese Food Night! We have the best food in town"
   },
   {
-
+    title: "Sushi night",
+    capacity: 10,
+    location: "Tokyo",
+    user: User.order("RANDOM()").first,
+    date: "19/10/2018",
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/rawpixel-754045-unsplash_1.jpg",
+    description: "Come to our sushi night! All you can eat"
   },
   {
-
+    title: "Mexican night",
+    capacity: 5,
+    location: "Mexico City",
+    user: User.order("RANDOM()").first,
+    date: "19/11/2018",
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/rawpixel-754045-unsplash_1.jpg",
+    description: "For sure.. the best tacos you'll ever have!"
   },
   {
-
-  },
+    title: "Israeli night",
+    capacity: 15,
+    location: "Tel Aviv",
+    user: User.order("RANDOM()").first,
+    date: "19/12/2018",
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/rawpixel-754045-unsplash_1.jpg",
+    description: "For sure.. the best falafel you'll ever have!"
+  }
 ]
 Event.create!(event_attirbutes)
