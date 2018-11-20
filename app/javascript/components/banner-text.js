@@ -5,8 +5,8 @@ function loadDynamicBannerText() {
   const CITIES = []
   new Typed('#banner-typed-text', {
     strings: ['Tel Aviv', 'Madrid', 'Berlin', 'Shanghai', 'Tokyo'],
-    typeSpeed: 50,
-    loop: true
+    typeSpeed: 200,
+    loop: false
   });
 }
 

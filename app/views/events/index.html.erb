@@ -1,5 +1,13 @@
+
+
+
 <%  @events.each do |event|%>
+<%= render 'shared/card' %>
+
   <%= event.title %>
+  <%= event.location %>
+
+
   <%= link_to 'Show', event_path(event) %>
   <br>
 <% end %>
