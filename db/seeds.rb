@@ -116,7 +116,7 @@ event_attirbutes = [
     location: "Rome",
     user: User.last,
     date: "12/12/2018",
-    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709453/shawn-ang-682394-unsplash.jpg"
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709453/at-home/shawn-ang-682394-unsplash.jpg"
 
   },
    {
@@ -125,7 +125,7 @@ event_attirbutes = [
     location: "Tel Aviv",
     user: User.fifth,
     date: "01/03/2018",
-    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/lee-myungseong-716836-unsplash.jpg"
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/at-home/lee-myungseong-716836-unsplash.jpg"
 
   },
    {
@@ -134,7 +134,7 @@ event_attirbutes = [
     location: "London",
     user: User.third,
     date: "4/10/2018",
-    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/rawpixel-754045-unsplash_1.jpg"
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709452/at-home/rawpixel-754045-unsplash.jpg"
 
   },
 ]
