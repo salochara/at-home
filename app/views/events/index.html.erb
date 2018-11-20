@@ -1,15 +1,15 @@
 
+  <h1> Events </h1>
+    <p> Check them out! </p>
+  <!-- <div class="gallery-container"> -->
+    <div class="gallery">
+      <%  @events.each do |event|%>
+      <div class="col-sm-4">
 
-
-<%  @events.each do |event|%>
-<%= render 'shared/card' %>
-
-  <%= event.title %>
-  <%= event.location %>
-
-
-  <%= link_to 'Show', event_path(event) %>
-  <br>
-<% end %>
+        <%= render event %>
+      </div>
+      <% end %>
+    <!-- </div> -->
+  </div>
 
 
