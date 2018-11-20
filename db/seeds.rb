@@ -1,9 +1,8 @@
 
-if Rails.env.development?
   Event.destroy_all
   User.destroy_all
   Reservation.destroy_all
-end
+
 
 user_attributes = [
   {
