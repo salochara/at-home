@@ -98,8 +98,8 @@ event_attirbutes = [
     location: "New York",
     user: User.first,
     date: "01/03/2019",
-    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709462/gabriel-garcia-marengo-68299-unsplash.jpg"
-
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709462/gabriel-garcia-marengo-68299-unsplash.jpg",
+    description: "Come to our Thanksgiving Dinner! You won't regret"
   },
    {
     title: "Picknick in the park",
@@ -107,8 +107,8 @@ event_attirbutes = [
     location: "Hyde Park",
     user: User.second,
     date: "06/10/2019",
-    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709522/brittany-gaiser-482343-unsplash.jpg"
-
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709522/brittany-gaiser-482343-unsplash.jpg",
+    description: "Come to our Picknick in the park! Let's enjoy the park together"
   },
    {
     title: "Italian Night",
@@ -116,8 +116,8 @@ event_attirbutes = [
     location: "Rome",
     user: User.last,
     date: "12/12/2018",
-    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709453/at-home/shawn-ang-682394-unsplash.jpg"
-
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709453/shawn-ang-682394-unsplash.jpg",
+    description: "Let's all enjoy an italian night! The best pastas and pizzas in town"
   },
    {
     title: "BBQ party",
@@ -125,7 +125,8 @@ event_attirbutes = [
     location: "Tel Aviv",
     user: User.fifth,
     date: "01/03/2018",
-    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/at-home/lee-myungseong-716836-unsplash.jpg"
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/lee-myungseong-716836-unsplash.jpg",
+    description: "Come to our BBQ party! The best BBQ in Tel Aviv"
 
   },
    {
@@ -134,8 +135,45 @@ event_attirbutes = [
     location: "London",
     user: User.third,
     date: "4/10/2018",
-    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709452/at-home/rawpixel-754045-unsplash.jpg"
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/rawpixel-754045-unsplash_1.jpg",
+    description: "Come to our Vietnamese Food Night! We have the best Pho in town"
+  },
+  {
+    title: "Chinese Food Night",
+    capacity: 7,
+    location: "Shanghai",
+    user: User.order("RANDOM()").first,
+    date: "15/10/2018",
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/rawpixel-754045-unsplash_1.jpg",
+    description: "Come to our Chinese Food Night! We have the best food in town"
+  },
+  {
+    title: "Sushi night",
+    capacity: 10,
+    location: "Tokyo",
+    user: User.order("RANDOM()").first,
+    date: "19/10/2018",
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/rawpixel-754045-unsplash_1.jpg",
+    description: "Come to our sushi night! All you can eat"
+  },
+  {
+    title: "Mexican night",
+    capacity: 5,
+    location: "Mexico City",
+    user: User.order("RANDOM()").first,
+    date: "19/11/2018",
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/rawpixel-754045-unsplash_1.jpg",
+    description: "For sure.. the best tacos you'll ever have!"
 
   },
+  {
+    title: "Israeli night",
+    capacity: 15,
+    location: "Tel Aviv",
+    user: User.order("RANDOM()").first,
+    date: "19/12/2018",
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/rawpixel-754045-unsplash_1.jpg",
+    description: "For sure.. the best falafel you'll ever have!"
+  }
 ]
 Event.create!(event_attirbutes)

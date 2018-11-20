@@ -1,4 +1,3 @@
-<%= @user.email %>
 
 <h3>Events <%=@user.name%> is hosting</h3>
 <ul>
@@ -15,7 +14,8 @@
     <li>
       <% Reservation.where(user: current_user, event: attending_event).each do |reservation| %>
       <%= reservation.event.title %>
-      <%= link_to 'Delete', reservation_path(reservation), method: :delete, data: {confirm: "Are you sure?"} %>
+      <%= link_to 'Go to event', attending_event, class: "btn btn-info" %>
+      <%= link_to 'Delete', reservation_path(reservation), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
     </li>
     <% end %>
   <% end %>
