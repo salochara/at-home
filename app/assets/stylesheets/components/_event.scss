@@ -1,0 +1,47 @@
+#events {
+  margin: 20px 0;
+}
+
+.event {
+  margin: 10px;
+  width: 350px;
+  height: 350px;
+  background: white;
+  border-radius: 10px;
+  box-shadow:  0 1px 7px rgba(0,0,0,.05);
+}
+
+.event-image {
+  height: 65%;
+  border-radius: 10px 10px 0 0;
+  background: blue;
+}
+
+.image {
+  background-size: 100%
+}
+
+.event-content {
+  padding: 20px;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-title {
+  font-weight: bold;
+}
+
+.event-location {
+  font-weight: lighter;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.event-joining {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

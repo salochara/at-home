@@ -1,28 +1,17 @@
-<%= link_to event do %>
-  <div class="frame">
-    <img class="image" src="https://i1.wp.com/craves.everybodyshops.com/wp-content/uploads/Thanksgiving-dinner-planning.jpg?fit=1143%2C762"/>
-    <div class="info">
-      <p><%= event.title %><p>
-      <p><%= event.location %><p>
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+  <div class="event">
+    <div class="event-image" style="background: linear-gradient(to bottom,rgba(20,20,20, 0.8),rgba(76,76,76,0.2) 30%), url(<%= event.photo %>) center / cover no-repeat;"></div>
+    <div class="event-content">
+      <div class="event-title"><%= event.title %></div>
+      <div class="event-location">
+        <%= event.location %>
+      </div>
+      <div class="event-joining">
+        <%= link_to "View Details", event_path(event), class: "btn btn-default" %>
+      </div>
     </div>
   </div>
-<% end %>
+</div>
 
-
-    <!-- div class="frame"><img class="image" src="https://images.unsplash.com/photo-1452967712862-0cca1839ff27?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bf7795a1be8eb3570d9b23c7f0f61bda&auto=format&fit=crop&w=1350&q=80"/>
-      <div class="info"></div<p>Steak Roast</p></div>
-    </div>
-
-    <div class="frame"><img class="image" src="https://images.unsplash.com/photo-1539586345401-51d5bfba7ac0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9a523c8360ca9e602b00e14f47076497&auto=format&fit=crop&w=750&q=80"/>
-      <div class="info">Seafood Time</div>
-    </div>
-
-    <div class="frame"><img class="image" src="https://images.unsplash.com/photo-1520756977789-ebed5554fb70?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2a2ece031243d39fc46c0f9b350eff8c&auto=format&fit=crop&w=750&q=80"/>
-      <div class="info">Greek Party</div>
-    </div>
-
-    <div class="frame"><img class="image" src="https://images.unsplash.com/photo-1509680859026-7d8cfc6894f4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d37b5b1bffd98e717ae399c479c50e5b&auto=format&fit=crop&w=750&q=80"/>
-      <div class="info">Asia Night</div>
-    </div>
-  </div> -->
 
