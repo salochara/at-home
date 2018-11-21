@@ -9,6 +9,7 @@ user_attributes = [
     name: "Alessandra",
     email: "alessandra@gmail.com",
     password: "12345678"
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542796875/Alessandra_Huydts.jpg"
   },
   {
     name: "Victoria",
@@ -126,7 +127,6 @@ event_attirbutes = [
     date: "01/12/2018 19:45",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/at-home/lee-myungseong-716836-unsplash.jpg",
     description: "What's better on a nice autumn evening than a BBQ in our cute little garden. My husband and I love to meet new people. He is great with the grill, and I love to prepare many different side dishes to go along with it. We would love to meet all of you who might be interested in having a little party with us."
-
   },
    {
     title: "Vietnamese Food Night",
@@ -163,7 +163,6 @@ event_attirbutes = [
     date: "23/11/2018 19:00",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542723038/at-home/christine-siracusa-363257-unsplash.jpg",
     description: "For sure.. the best tacos you'll ever have!"
-
   },
   {
     title: "Israeli night",
@@ -181,8 +180,7 @@ event_attirbutes = [
     user: User.order("RANDOM()").first,
     date: "19/11/2018",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790596/jorge-zapata-44723-unsplash.jpg",
-    description: "For sure.. the best tacos you'll ever have!"
-
+    description: "For sure.. the best pasta you'll ever have!"
   },
 {
     title: "Light Japanese Lunch ",
@@ -191,8 +189,7 @@ event_attirbutes = [
     user: User.order("RANDOM()").first,
     date: "19/11/2018",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790594/rawpixel-1062919-unsplash.jpg",
-    description: "For sure.. the best tacos you'll ever have!"
-
+    description: "For sure.. the best japanese food you'll ever have!"
   },
 {
     title: "Community Dinner",
@@ -201,8 +198,7 @@ event_attirbutes = [
     user: User.order("RANDOM()").first,
     date: "19/11/2018",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790591/rawpixel-778722-unsplash.jpg",
-    description: "For sure.. the best tacos you'll ever have!"
-
+    description: "For sure.. the best dinner experience you'll ever have!"
   },
 {
     title: "Excessive Brunch",
@@ -211,8 +207,7 @@ event_attirbutes = [
     user: User.order("RANDOM()").first,
     date: "19/11/2018",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790588/rachel-park-366508-unsplash.jpg",
-    description: "For sure.. the best tacos you'll ever have!"
-
+    description: "For sure.. the best breakfast food you'll ever have!"
   },
 {
     title: "Homecooked Indian Dinner",
@@ -221,8 +216,7 @@ event_attirbutes = [
     user: User.order("RANDOM()").first,
     date: "19/11/2018",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790587/pille-riin-priske-986371-unsplash.jpg",
-    description: "For sure.. the best tacos you'll ever have!"
-
+    description: "For sure.. the best Naan bread and butter chicken you'll ever have!"
   },
 {
     title: "Snacks and wine",
@@ -231,8 +225,7 @@ event_attirbutes = [
     user: User.order("RANDOM()").first,
     date: "19/11/2018",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790587/kelsey-chance-575535-unsplash.jpg",
-    description: "For sure.. the best tacos you'll ever have!"
-
+    description: "For sure.. the best experience you'll ever have!"
   },
 {
     title: "Picknick and Wine night",
@@ -241,8 +234,7 @@ event_attirbutes = [
     user: User.order("RANDOM()").first,
     date: "19/11/2018",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790583/dave-lastovskiy-127581-unsplash.jpg",
-    description: "For sure.. the best tacos you'll ever have!"
-
+    description: "For sure.. the best picknick you'll ever have!"
   },
 {
     title: "Korean Bibimbap",
@@ -260,8 +252,7 @@ event_attirbutes = [
     user: User.order("RANDOM()").first,
     date: "23/11/2018 21:00",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790583/dan-gold-105699-unsplash.jpg",
-    description: "For sure.. the best tacos you'll ever have!"
-
+    description: "For sure.. the best burgers you'll ever have!"
   },
 {
     title: "Great Sandwiches",
@@ -270,8 +261,7 @@ event_attirbutes = [
     user: User.order("RANDOM()").first,
     date: "23/11/2018 15:00",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790579/anna-sullivan-635364-unsplash.jpg",
-    description: "For sure.. the best tacos you'll ever have!"
-
+    description: "For sure.. the best sandwishes you'll ever have!"
   },
 {
     title: "Vegan Breakfast",
@@ -280,8 +270,7 @@ event_attirbutes = [
     user: User.order("RANDOM()").first,
     date: "23/11/2018 10:00",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790579/ho-hyou-735008-unsplash.jpg",
-    description: "For sure.. the best tacos you'll ever have!"
-
+    description: "For sure.. the best vegan food you'll ever have!"
   },
   {
     title: "Taco Night",
@@ -291,7 +280,6 @@ event_attirbutes = [
     date: "6/12/2018 21:00",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790578/heather-schwartz-798959-unsplash.jpg",
     description: "For sure.. the best tacos you'll ever have!"
-
   },
   {
     title: "Homemade Sushi",
@@ -301,7 +289,6 @@ event_attirbutes = [
     date: "22/11/2018 17:00",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790578/epicurrence-64533-unsplash.jpg",
     description: "I’m a sushi chef working at a sushi bar in London. Making sushi is my life's passion, and I hope to share the art of preparing delicious sushi with you."
-
   },
   {
     title: "Pancake Breakfast",
@@ -311,7 +298,6 @@ event_attirbutes = [
     date: "2/12/2018 10:00 ",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790577/calum-lewis-387612-unsplash.jpg",
     description: "Architect of training and passionate about cooking and gastronomy, I just created my gourmet pancake manufacturing company in collaboration with my sister and we deliver in the region of Aix-en-Provence lunch boxes for brunches and lunches. Sharing this experience with you would allow me to meet new people while making you discover my passion, as well as local products."
-
   },
   {
     title: "Homemade Italian Dinner",
