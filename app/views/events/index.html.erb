@@ -1,3 +1,6 @@
+<%= simple_form_for :search, url: events_path, method: :get do |f| %>
+  <%= f.input :query, label: false, placeholder: "Search" %>
+<% end %>
 
 <div class="container">
   <div id="events">
