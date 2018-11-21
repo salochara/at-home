@@ -10,8 +10,19 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-
     authorize @event
+  end
+
+  def results
+    @events = Event.where.not(latitude: nil, longitude: nil)
+    authorize @events
+
+    @markers = @events.map do |flat|
+      {
+        lng: flat.longitude,
+        lat: flat.latitude
+      }
+    end
   end
 
   private

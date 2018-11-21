@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   resources :events, only: [:index, :show] do
     resources :reservations ,only: [:create]
+    collection do
+      get 'results'
+    end
   end
   resources :users, only: [:show, :edit, :update]
 
