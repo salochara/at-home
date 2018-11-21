@@ -12,4 +12,8 @@ class EventPolicy < ApplicationPolicy
   def show?
     true
   end
+
+  def results?
+    true
+  end
 end

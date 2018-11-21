@@ -8,7 +8,7 @@ user_attributes = [
   {
     name: "Alessandra",
     email: "alessandra@gmail.com",
-    password: "12345678"
+    password: "12345678",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542796875/Alessandra_Huydts.jpg"
   },
   {

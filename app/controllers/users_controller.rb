@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def show
     @user = current_user
     authorize @user
@@ -26,6 +25,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :photo)
   end
-
 end
-
