@@ -1,37 +1,63 @@
 
- <img src="banner1.jpg" alt="" width="150" class="img-circle">
 
 <div class="container">
-  <div class="grid">
-  <div class="showcard">
-    <div class="cardcontent">
-      <div class="showimg">
-        <%= cl_image_tag(@event&.photo)%>
+  <div class="row">
+    <div class="col-xs-8">
+          <div class="showcard">
+      <div class="cardcontent">
+        <div class="showimg">
+          <%= cl_image_tag(@event&.photo)%>
+        </div>
+
+         <!-- <img src= <%= @event.photo %>alt="" class="showimg"> -->
       </div>
+    </div>
+    </div>
+    <div class="col-xs-4">
+      <p><div class="showcard">
+      <div class="cardcontent">
+        <h2> <%= @event.title %> </h2>
+        <div class ="graytext">
+        <p>
+          ______________________________
+         </div>
 
-       <!-- <img src= <%= @event.photo %>alt="" class="showimg"> -->
-    </div>
-  </div>
- <div class="grid-2">
-  <div class="showcard">
-    <div class="cardcontent">
-      <h1> <%= @event.title %> </h1>
-      <p> <%= @event.location %> </p>
-      <p> December 15th, 2018 </p>
-        <% event_id_url = Event.find(params[:id]) %>
-        <% if current_user.attending_events.include? event_id_url %>
-         <p>You've joined this event</p>
-      <% else %>
-     <%= link_to 'Join', event_reservations_path(@event), method: :post, class: "btn btn-primary" %>
+        </p>
 
-  <% end %>
+        <em><p> <%= @event.location %> </p> </em>
+         <p> <%= @event.date %> </p>
+        <p> <%= @event.description %> </p>
+        <div class ="graytext">
+        <p>
+
+          ______________________________
+
+        </p>
+        </div>
+          <% event_id_url = Event.find(params[:id]) %>
+          <% if current_user.attending_events.include? event_id_url %>
+         <div class="greentext">
+           <p>You've joined this event!</p>
+           </div>
+        <% else %>
+       <%= link_to 'Join', event_reservations_path(@event), method: :post, class: "btn btn-primary" %>
+
+    <% end %>
+
+    </div>
+  </div></p>
     </div>
   </div>
-  <div class="showcard">
-    <div class="cardcontent">
-      <p> Thank you for your interest in our dinner! We are very much looking forward to meeting you. We will have all the fixings including lots of vino. </p>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="showcard">
+      <div class="cardcontent">
+        <div class="showimg">
+          <img src="http://home.bt.com/images/google-maps-for-hero-image-136422203736402601-171019162758.jpg" alt="" class="src">
+        </div>
+
+         <!-- <img src= <%= @event.photo %>alt="" class="showimg"> -->
+      </div>
     </div>
-  </div>
-  </div>
   </div>
 </div>
