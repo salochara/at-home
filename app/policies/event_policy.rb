@@ -16,4 +16,8 @@ class EventPolicy < ApplicationPolicy
   def results?
     true
   end
+
+  def create?
+    true
+  end
 end
