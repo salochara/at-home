@@ -1,5 +1,5 @@
 .grid {
-
+display: flex;
 display: grid;
 grid-template-columns: 600px 30%;
 grid-template-rows: 450px 1fr;
@@ -10,6 +10,7 @@ border-radius: 5px;
 .grid-2 {
 
 display: grid;
+display: flex;
 
 grid-template-rows: 60% 40%;
 }
@@ -40,4 +41,5 @@ background: white;
 .container {
   padding:auto;
 margin:auto;
+display: flex;
 }
