@@ -5,7 +5,13 @@ class EventsController < ApplicationController
   # after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
   def index
-    @events = policy_scope(Event).all
+    @query = params.dig(:search, :query)
+
+    if @query.present?
+      @events = policy_scope(Event).search_by_location(@query)
+    else
+      @events = policy_scope(Event).all
+    end
   end
 
   def show
@@ -29,5 +35,9 @@ class EventsController < ApplicationController
 
   def set_event
 
+  end
+
+  def event_params
+    params.require(:event).permit(:query)
   end
 end
