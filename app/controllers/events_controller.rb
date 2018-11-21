@@ -17,8 +17,9 @@ class EventsController < ApplicationController
 
   def results
     @query = params.dig(:search, :query)
-    if @query.present? && Event.where.not(latitude: nil, longitude: nil)
-      @events = policy_scope(Event).search_by_location(@query)
+    if @query.present?
+      @events = policy_scope(Event).where.not(latitude: nil, longitude: nil)
+      @events = @events.search_by_location(@query)
     else
       @events = policy_scope(Event).take(6)
     end
