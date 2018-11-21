@@ -10,7 +10,7 @@ class EventsController < ApplicationController
     if @query.present?
       @events = policy_scope(Event).search_by_location(@query)
     else
-      @events = policy_scope(Event).all
+      @events = policy_scope(Event).take(6)
     end
   end
 
