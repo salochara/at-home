@@ -10,12 +10,12 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-
     authorize @event
   end
 
   def results
     @events = Event.where.not(latitude: nil, longitude: nil)
+    authorize @events
 
     @markers = @events.map do |flat|
       {
@@ -23,10 +23,6 @@ class EventsController < ApplicationController
         lat: flat.latitude
       }
     end
-    @events = policy_scope(Event).all
-    # @movies = policy_scope(Movie).top_6
-
-
   end
 
   private
