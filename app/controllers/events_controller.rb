@@ -5,13 +5,9 @@ class EventsController < ApplicationController
   # after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
   def index
-    @query = params.dig(:search, :query)
+    @events = policy_scope(Event).take(6)
 
-    if @query.present?
-      @events = policy_scope(Event).search_by_location(@query)
-    else
-      @events = policy_scope(Event).all
-    end
+
   end
 
   def show
@@ -20,15 +16,22 @@ class EventsController < ApplicationController
   end
 
   def results
-    @events = Event.where.not(latitude: nil, longitude: nil)
-    authorize @events
+    @query = params.dig(:search, :query)
+    if @query.present? && Event.where.not(latitude: nil, longitude: nil)
+      @events = policy_scope(Event).search_by_location(@query)
+    else
+      @events = policy_scope(Event).take(6)
+    end
 
-    @markers = @events.map do |flat|
+    @markers = @events.map do |event|
+      # byebug
       {
-        lng: flat.longitude,
-        lat: flat.latitude
+        lng: event.longitude,
+        lat: event.latitude,
+        infoWindow: { content: render_to_string(partial: "/events/map_windows", locals: { event: event }) }
       }
     end
+    authorize @events
   end
 
   def new
