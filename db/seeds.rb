@@ -98,7 +98,7 @@ event_attirbutes = [
     user: User.first,
     date: "23/11/2018",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709462/gabriel-garcia-marengo-68299-unsplash.jpg",
-    description: "Come to our Thanksgiving Dinner! You won't regret"
+    description: "Come to our Thanksgiving Dinner! You won't regret it. We will have a turkey and all the must have thanksgiving dishes. You are also welcome to bring some of your favorite dishes to share with all of us at our feast."
   },
    {
     title: "Picknick in the park",
@@ -107,7 +107,7 @@ event_attirbutes = [
     user: User.second,
     date: "22/11/2018 19:30",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709522/brittany-gaiser-482343-unsplash.jpg",
-    description: "Come to our Picknick in the park! Let's enjoy the park together"
+    description: "You like a cosy atmosphere with nice people? Then this event is perfect for you. We will meet up and have a nice dinner in the park. We will bring many small dishes but you are welcome to let us know if you also want to bring something. We are looking forward to meeting you and enjoying a nice little dinner together. "
   },
    {
     title: "Italian Night",
@@ -116,7 +116,7 @@ event_attirbutes = [
     user: User.last,
     date: "12/12/2018 20:00",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709453/at-home/shawn-ang-682394-unsplash.jpg",
-    description: "Let's all enjoy an italian night! The best pastas and pizzas in town"
+    description: "My mother is Italian and she taught me a lot about making italian food. I love cooking italian food and I would love to cook some of my families recipies for you. Sign up to try a variety of italian food. Click join to have dinner with me."
   },
    {
     title: "BBQ party",
@@ -125,7 +125,7 @@ event_attirbutes = [
     user: User.fifth,
     date: "01/12/2018 19:45",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/at-home/lee-myungseong-716836-unsplash.jpg",
-    description: "Come to our BBQ party! The best BBQ in Tel Aviv"
+    description: "What's better on a nice autumn evening than a BBQ in our cute little garden. My husband and I love to meet new people. He is great with the grill, and I love to prepare many different side dishes to go along with it. We would love to meet all of you who might be interested in having a little party with us."
 
   },
    {
@@ -135,13 +135,12 @@ event_attirbutes = [
     user: User.third,
     date: "4/12/2018 19:30",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/at-home/rawpixel-754045-unsplash_1.jpg",
-    description: "Come to our Vietnamese Food Night! We have the best Pho in town"
+    description: "I recently travelled to Vietnam and did a cooking course there. Now that I am back in Tel Aviv I want to practice my skills. Its not very fun to eat by myself so I would love for you to join me try my new creations"
   },
   {
     title: "Dinner Outdoors",
     capacity: 4,
-    location: "HaYarkon St 66, Tel Aviv-Yafo, Israel
-",
+    location: "HaYarkon St 66, Tel Aviv-Yafo, Israel",
     user: User.order("RANDOM()").first,
     date: "22/11/2018 18:30",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542709451/at-home/johanna-dahlberg-690086-unsplash.jpg",
@@ -174,7 +173,7 @@ event_attirbutes = [
     date: "19/12/2018 20:00",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542723030/at-home/louis-hansel-1160001-unsplash.jpg",
     description: "For sure.. the best falafel you'll ever have!"
-  }
+  },
   {
     title: "Authentic Pasta night",
     capacity: 4,
@@ -198,8 +197,7 @@ event_attirbutes = [
 {
     title: "Community Dinner",
     capacity: 8,
-    location: "Fehrbelliner Pl., 10707 Berlin, Germany
-",
+    location: "Fehrbelliner Pl., 10707 Berlin, Germany",
     user: User.order("RANDOM()").first,
     date: "19/11/2018",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790591/rawpixel-778722-unsplash.jpg",
@@ -249,20 +247,18 @@ event_attirbutes = [
 {
     title: "Korean Bibimbap",
     capacity: 2,
-    location: "45 Bayard St, New York, NY 10013
-",
+    location: "45 Bayard St, New York, NY 10013",
     user: User.order("RANDOM()").first,
-    date: "19/11/2018",
-    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790583/dave-lastovskiy-127581-unsplash.jpg",
+    date: "23/11/2018 19:00",
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790583/jakub-kapusnak-296881-unsplash.jpg",
     description: "For sure.. the best tacos you'll ever have!"
-
   },
 {
     title: "Burgers and Beer",
     capacity: 3,
     location: "138 Lafayette St, New York, NY",
     user: User.order("RANDOM()").first,
-    date: "19/11/2018",
+    date: "23/11/2018 21:00",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790583/dan-gold-105699-unsplash.jpg",
     description: "For sure.. the best tacos you'll ever have!"
 
@@ -272,7 +268,7 @@ event_attirbutes = [
     capacity: 4,
     location: "142 Orchard St, New York, NY",
     user: User.order("RANDOM()").first,
-    date: "19/11/2018",
+    date: "23/11/2018 15:00",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790579/anna-sullivan-635364-unsplash.jpg",
     description: "For sure.. the best tacos you'll ever have!"
 
@@ -290,21 +286,21 @@ event_attirbutes = [
   {
     title: "Taco Night",
     capacity: 6,
-    location: "Mexico City",
+    location: "593 High Rd Leytonstone, London E11 4PA, UK",
     user: User.order("RANDOM()").first,
     date: "6/12/2018 21:00",
-    photo: "593 High Rd Leytonstone, London E11 4PA, UK",
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790578/heather-schwartz-798959-unsplash.jpg",
     description: "For sure.. the best tacos you'll ever have!"
 
   },
   {
     title: "Homemade Sushi",
     capacity: 2,
-    location: "Mexico City",
+    location: "117 Benwell Rd, London N7 7BW, UK",
     user: User.order("RANDOM()").first,
     date: "22/11/2018 17:00",
-    photo: "117 Benwell Rd, London N7 7BW, UK",
-    description: "For sure.. the best tacos you'll ever have!"
+    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790578/epicurrence-64533-unsplash.jpg",
+    description: "I’m a sushi chef working at a sushi bar in London. Making sushi is my life's passion, and I hope to share the art of preparing delicious sushi with you."
 
   },
   {
@@ -314,7 +310,7 @@ event_attirbutes = [
     user: User.order("RANDOM()").first,
     date: "2/12/2018 10:00 ",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790577/calum-lewis-387612-unsplash.jpg",
-    description: "For sure.. the best tacos you'll ever have!"
+    description: "Architect of training and passionate about cooking and gastronomy, I just created my gourmet pancake manufacturing company in collaboration with my sister and we deliver in the region of Aix-en-Provence lunch boxes for brunches and lunches. Sharing this experience with you would allow me to meet new people while making you discover my passion, as well as local products."
 
   },
   {
@@ -324,7 +320,7 @@ event_attirbutes = [
     user: User.order("RANDOM()").first,
     date: "23/11/2018 19:00",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790577/christine-siracusa-385441-unsplash.jpg",
-    description: "For sure.. the best tacos you'll ever have!"
+    description: "We are the owners of this famous pasta shop called 'Dalle nostre mani'. We make fresh pasta as our mum and grandma tought us and we will share with you all the secrets of working with flour and water. Our family owns an organic farm where we produce wine, olive oil, fruit and vegetable that you will taste in our restaurant Vivanda as conclusion of the experience."
 
   }
 ]
