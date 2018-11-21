@@ -6,4 +6,8 @@ class User < ApplicationRecord
   has_many :events
   has_many :reservations
   has_many :attending_events, through: :reservations, source: :event
+
+  mount_uploader :photo, PhotoUploader
+
+
 end
