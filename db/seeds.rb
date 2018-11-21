@@ -156,15 +156,6 @@ event_attirbutes = [
     description: "Come to our sushi night! All you can eat"
   },
   {
-    title: "Mexican night",
-    capacity: 6,
-    location: "Shlomo Ibn Gabirol St 12, Tel Aviv-Yafo, Israel",
-    user: User.order("RANDOM()").first,
-    date: "23/11/2018 19:00",
-    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542723038/at-home/christine-siracusa-363257-unsplash.jpg",
-    description: "For sure.. the best tacos you'll ever have!"
-  },
-  {
     title: "Israeli night",
     capacity: 3,
     location: "Aluf Kalman Magen St 3, Tel Aviv-Yafo, Israel",
@@ -271,15 +262,6 @@ event_attirbutes = [
     date: "23/11/2018 10:00",
     photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790579/ho-hyou-735008-unsplash.jpg",
     description: "For sure.. the best vegan food you'll ever have!"
-  },
-  {
-    title: "Taco Night",
-    capacity: 6,
-    location: "593 High Rd Leytonstone, London E11 4PA, UK",
-    user: User.order("RANDOM()").first,
-    date: "6/12/2018 21:00",
-    photo: "https://res.cloudinary.com/dmeg8bow6/image/upload/v1542790578/heather-schwartz-798959-unsplash.jpg",
-    description: "For sure.. the best tacos you'll ever have!"
   },
   {
     title: "Homemade Sushi",
