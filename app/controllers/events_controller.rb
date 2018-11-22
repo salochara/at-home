@@ -13,6 +13,12 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     authorize @event
+
+    @markers = {
+      lng: @event.longitude,
+      lat: @event.latitude,
+      infoWindow: { content: render_to_string(partial: "/events/map_windows", locals: { event: @event }) }
+    }
   end
 
   def results

@@ -1,5 +1,7 @@
 import 'mapbox-gl/dist/mapbox-gl.css'
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
+console.log("heloo")
+
 
 const mapElement = document.getElementById('map');
 
@@ -32,6 +34,6 @@ if (mapElement) {
     });
     map.fitBounds(bounds, { duration: 0, padding: 75 })
   }
-}
+ }
 
 
