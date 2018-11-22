@@ -52,11 +52,11 @@ before_action :set_event, only: [:show, :edit, :update, :destroy]
   end
 
   def update
-    if @event.update(event_params)
-      redirect_to @event, notice: 'Event successfully updated.'
-    else
-      render :edit
-    end
+      if @event.update(event_params)
+        redirect_to @event, notice: 'Event successfully updated.'
+      else
+        render :edit
+      end
   end
 
   def destroy
