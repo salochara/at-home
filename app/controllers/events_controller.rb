@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   # before_action :set_event, only: [:show]
   # after_action :verify_authorized, except: :index, unless: :skip_pundit?
   # after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
-before_action :set_event, only: [:show, :edit, :update]
+before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
     @events = policy_scope(Event).take(6)
@@ -57,6 +57,11 @@ before_action :set_event, only: [:show, :edit, :update]
     else
       render :edit
     end
+  end
+
+  def destroy
+    @event.destroy
+    redirect_to user_path(current_user)
   end
 
   private
