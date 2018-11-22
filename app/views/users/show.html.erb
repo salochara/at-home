@@ -7,9 +7,15 @@
     <div class="col-xs-8">
           <div class="showcard">
       <div class="cardcontent">
+        <% if event.photo.present? %>
         <div class="showimg">
           <%= cl_image_tag(event.photo, height:300)%>
         </div>
+        <% else %>
+        <div class="showimg">
+          <%= image_tag('placeholder.jpg', height:300)%>
+        </div>
+        <% end %>
 
 
       </div>
