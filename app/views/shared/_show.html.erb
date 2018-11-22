@@ -1,6 +1,4 @@
 <div class="container">
-
-<div class="container">
   <div class="row">
     <div class="col-xs-8">
           <div class="showcard400px">
@@ -24,8 +22,9 @@
 
         </p>
 
-        <em><p> <%= @event.location %> </p> </em>
-         <p> <%= @event.date %> </p>
+        <p> <em> <%= @event.location %> </em></p>
+         <p><%= @event.date.to_formatted_s(:long_ordinal)%></p>
+
         <p> <%= @event.description %> </p>
         <div class ="graytext">
         <p>
@@ -38,11 +37,12 @@
           <% if current_user.attending_events.include? event_id_url %>
          <div class="greentext">
            <p>You've joined this event!</p>
+           <% elsif @event.reservations.count >= @event.capacity %>
+              <p>This event is full</p>
            </div>
         <% else %>
        <%= link_to 'Join', event_reservations_path(@event), method: :post, class: "btn btn-primary" %>
-
-    <% end %>
+      <% end %>
 
     </div>
   </div></p>
@@ -53,7 +53,21 @@
    <div class="showcardmap">
       <div class="cardcontent">
         <div class="showimg">
-          <img class= "resizeimagemap"src="http://home.bt.com/images/google-maps-for-hero-image-136422203736402601-171019162758.jpg" alt="" class="src">
+
+                 <img src="http://home.bt.com/images/google-maps-for-hero-image-136422203736402601-171019162758.jpg" alt="" class="src">
+          <div id='map'class= "resizeimagemap" style='width: 1050px; height: 300px;'></div>
+            <script>
+
+
+                mapboxgl.accessToken = 'pk.eyJ1Ijoic2Fsb2NoYXJhIiwiYSI6ImNqb3IxZDhobzBhMmwzcG0ybzczY3J6djQifQ.qn79eTRCsHNSOL5SJxrcIw';
+                var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/streets-v9',
+                    center: [gon.lng, gon.lat], // starting position [lng, lat]
+                    zoom: 14 // starting zoom
+                });
+                console.log(gon.lng);
+              </script>
         </div>
 
          <!-- <img src= <%= @event.photo %>alt="" class="showimg"> -->
@@ -62,3 +76,9 @@
   </div>
 </div>
 </div>
+
+
+
+
+
+

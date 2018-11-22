@@ -21,6 +21,7 @@ gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 gem 'geocoder'
 gem 'pg_search'
+gem 'gon'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

@@ -10,6 +10,16 @@ before_action :set_event, only: [:show, :edit, :update, :destroy]
   end
 
   def show
+
+    @markers = {
+      lng: @event.longitude,
+      lat: @event.latitude,
+      infoWindow: { content: render_to_string(partial: "/events/map_windows", locals: { event: @event }) }
+    }
+
+    gon.lng = @event.longitude
+    gon.lat = @event.latitude
+
   end
 
   def results
