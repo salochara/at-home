@@ -37,11 +37,12 @@
           <% if current_user.attending_events.include? event_id_url %>
          <div class="greentext">
            <p>You've joined this event!</p>
+           <% elsif @event.reservations.count >= @event.capacity %>
+              <p>This event is full</p>
            </div>
         <% else %>
        <%= link_to 'Join', event_reservations_path(@event), method: :post, class: "btn btn-primary" %>
-
-    <% end %>
+      <% end %>
 
     </div>
   </div></p>
