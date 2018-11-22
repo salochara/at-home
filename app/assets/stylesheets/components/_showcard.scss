@@ -18,6 +18,33 @@
 
 }
 
+.rowcard {
+  height: 200px;
+  width: 60vw;
+  padding: 20px;
+  background: rgba(0,0,0,0.0);
+
+}
+
+.resizeimage {
+  width:200px;
+ height: 150px;
+ align-items: center;
+justify-content: space-around;
+}
+
+.showcarddashboard{
+  background: white;
+  display: flex;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  width: 200px
+}
+
 // .grid-2 {
 
 // display: grid;
