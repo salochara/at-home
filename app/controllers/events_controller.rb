@@ -3,14 +3,13 @@ class EventsController < ApplicationController
   # before_action :set_event, only: [:show]
   # after_action :verify_authorized, except: :index, unless: :skip_pundit?
   # after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
+before_action :set_event, only: [:show, :edit, :update]
 
   def index
     @events = policy_scope(Event).take(6)
   end
 
   def show
-    @event = Event.find(params[:id])
-    authorize @event
   end
 
   def results
@@ -50,17 +49,21 @@ class EventsController < ApplicationController
   end
 
   def edit
-    @event = Event.find(params[:id])
   end
 
   def update
-
+    if @event.update(event_params)
+      redirect_to @event, notice: 'Event successfully updated.'
+    else
+      render :edit
+    end
   end
 
   private
 
   def set_event
-
+    @event = Event.find(params[:id])
+    authorize @event
   end
 
   def event_params
