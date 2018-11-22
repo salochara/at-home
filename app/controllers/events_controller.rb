@@ -6,8 +6,6 @@ class EventsController < ApplicationController
 
   def index
     @events = policy_scope(Event).take(6)
-
-
   end
 
   def show
@@ -57,6 +55,7 @@ class EventsController < ApplicationController
 
   def update
   end
+
   private
 
   def set_event
