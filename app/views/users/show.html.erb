@@ -8,10 +8,10 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-8">
-          <div class="showcard">
+          <div class="showcard400px">
       <div class="cardcontent">
         <div class="showimg">
-        <img src="https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d892112a159aee439a3bbb23586fa21d&auto=format&fit=crop&w=400&q=60" alt="" class="">
+        <img class ="resizeimage"src="https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d892112a159aee439a3bbb23586fa21d&auto=format&fit=crop&w=400&q=60" alt="" class="">
         </div>
 
 
@@ -19,11 +19,11 @@
     </div>
     </div>
     <div class="col-xs-4">
-      <p><div class="showcard">
+      <div class="showcard400px">
       <div class="cardcontent">
         <h2> <%=event.title %> </h2>
         <div class ="graytext">
-        <p>
+
           ______________________________
          </div>
 
@@ -74,7 +74,7 @@
         </p>
         </div> -->
 
-        <div class="event-joining">
+        <div>
               <%= link_to "Edit", edit_event_path(event), class: "btn btn-primary" %>
               <%= link_to "Destroy", event_path(event), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
             </div>
@@ -115,7 +115,7 @@
           <div class="showcard">
       <div class="cardcontent">
         <div class="showimg">
-        <img src="https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d892112a159aee439a3bbb23586fa21d&auto=format&fit=crop&w=400&q=60" alt="" class="">
+        <img class="resizeimage"src="https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d892112a159aee439a3bbb23586fa21d&auto=format&fit=crop&w=400&q=60" alt="" class="">
         </div>
 
 
@@ -123,7 +123,7 @@
     </div>
     </div>
     <div class="col-xs-4">
-      <p><div class="showcard">
+      <p><div class="showcard400px">
       <div class="cardcontent">
         <h2> <%= reservation.event.title %> </h2>
         <div class ="graytext">
