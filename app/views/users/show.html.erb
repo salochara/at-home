@@ -1,25 +1,123 @@
 
-<h3>Events <%=@user.name%> is hosting</h3>
-<ul>
-  <% @user.events.each do |event| %>
-    <li>
-      <%= event.title %>
-    </li>
-  <% end %>
-</ul>
 
-<h3>Events <%=@user.name%> is attending</h3>
-<ul>
-  <% @user.attending_events.each do |attending_event| %>
-    <li>
-      <% Reservation.where(user: current_user, event: attending_event).each do |reservation| %>
-      <%= reservation.event.title %>
-      <%= link_to 'Go to event', attending_event, class: "btn btn-info" %>
+<div class="container">
+  <h3>Events <%=@user.name%> is hosting</h3>
+    <% @user.events.each do |event| %>
 
-    </li>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-8">
+          <div class="showcard">
+      <div class="cardcontent">
+        <div class="showimg">
+          <img src="https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d892112a159aee439a3bbb23586fa21d&auto=format&fit=crop&w=400&q=60" alt="" class="">
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+    <div class="col-xs-4">
+      <p><div class="showcard">
+      <div class="cardcontent">
+        <h2> <%= event.title %> </h2>
+        <div class ="graytext">
+        <p>
+          ______________________________
+         </div>
+
+        </p>
+
+        <em><p> <%= event.location %> </p> </em>
+         <p> <%= event.date %> </p>
+        <p> <%= event.description %> </p>
+        <div class ="graytext">
+        <p>
+
+          ______________________________
+
+        </p>
+        </div>
+
+        <div class="event-joining">
+              <%= link_to "View Details", event_path(event), class: "btn btn-default" %>
+              <%= link_to "Edit", event_path(event), class: "btn btn-primary" %>
+            </div>
+      <!-- EDIT BUTTON STATIC!-->
+    </div>
+  </div>
+    </div>
+  </div>
+
+    <!-- <div class="container-fluid">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="event">
+        <div class="event-image" style="background: linear-gradient(to bottom,rgba(20,20,20, 0.8),rgba(76,76,76,0.2) 30%), url(<%= cl_image_path(event.photo, width: 300, crop: "scale") %>) center / cover no-repeat;"></div>
+          <div class="event-content">
+            <div class="event-title"><%= event.title %></div>
+              <div class="event-location">
+              <%= event.location %>
+            </div>
+            <div class="event-joining">
+              <%= link_to "View Details", event_path(event), class: "btn btn-info" %>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div> -->
     <% end %>
-  <% end %>
-</ul>
+
+  <h3>Events <%=@user.name%> is attending</h3>
+    <% @user.attending_events.each do |attending_event| %>
+    <div class="container">
+        <% Reservation.where(user: current_user, event: attending_event).each do |reservation| %>
+        <div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-8">
+          <div class="showcard">
+      <div class="cardcontent">
+        <div class="showimg">
+        <img src="https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d892112a159aee439a3bbb23586fa21d&auto=format&fit=crop&w=400&q=60" alt="" class="">
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+    <div class="col-xs-4">
+      <p><div class="showcard">
+      <div class="cardcontent">
+        <h2> <%= reservation.event.title %> </h2>
+        <div class ="graytext">
+        <p>
+          ______________________________
+         </div>
+
+        </p>
+
+        <em><p> <%= reservation.event.location %> </p> </em>
+         <p> <%= reservation.event.date %> </p>
+        <p> <%= reservation.event.description %> </p>
+        <div class ="graytext">
+        <p>
+
+          ______________________________
+
+        </p>
+        </div>
+        <%= link_to 'View details', attending_event, class: "btn btn-default" %>
+        <%= link_to 'Delete', reservation_path(reservation), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+      <!-- INSERT BUTTTONS!!!! -->
+    </div>
+  </div>
+    </div>
+  </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+  </div>
+</div>
 
 
 
