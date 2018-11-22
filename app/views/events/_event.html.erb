@@ -1,5 +1,5 @@
 <div class="event">
-  <div class="event-image" style="background: linear-gradient(to bottom,rgba(20,20,20, 0.8),rgba(76,76,76,0.2) 30%), url(<%= cl_image_path(event.photo, width: 300, crop: "scale") %>) center / cover no-repeat;"></div>
+  <div class="event-image" style="background: linear-gradient(to bottom,rgba(20,20,20, 0.8),rgba(76,76,76,0.2) 30%), url(<%= cl_image_path(event.photo, width: 300, crop: "scale", :quality=>"auto:low")  %>) center / cover no-repeat;"></div>
   <div class="event-content">
     <div class="event-title"><%= event.title %></div>
     <div class="event-location">
