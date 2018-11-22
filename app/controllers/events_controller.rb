@@ -19,6 +19,9 @@ class EventsController < ApplicationController
       lat: @event.latitude,
       infoWindow: { content: render_to_string(partial: "/events/map_windows", locals: { event: @event }) }
     }
+
+    gon.lng = @event.longitude
+    gon.lat = @event.latitude
   end
 
   def results
