@@ -3,10 +3,10 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-8">
-          <div class="showcard">
+          <div class="showcard400px">
       <div class="cardcontent">
         <div class="showimg">
-          <%= cl_image_tag(@event&.photo)%>
+          <img class= "resizeimage" <%= cl_image_tag(@event&.photo)%>
         </div>
 
          <!-- <img src= <%= @event.photo %>alt="" class="showimg"> -->
@@ -14,7 +14,7 @@
     </div>
     </div>
     <div class="col-xs-4">
-      <p><div class="showcard">
+      <p><div class="showcard400px">
       <div class="cardcontent">
         <h2> <%= @event.title %> </h2>
         <div class ="graytext">
@@ -50,10 +50,10 @@
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <div class="showcard">
+   <div class="showcardmap">
       <div class="cardcontent">
         <div class="showimg">
-          <img src="http://home.bt.com/images/google-maps-for-hero-image-136422203736402601-171019162758.jpg" alt="" class="src">
+          <img class= "resizeimagemap"src="http://home.bt.com/images/google-maps-for-hero-image-136422203736402601-171019162758.jpg" alt="" class="src">
         </div>
 
          <!-- <img src= <%= @event.photo %>alt="" class="showimg"> -->

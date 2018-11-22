@@ -23,6 +23,13 @@
 
 }
 
+.resizeimagemap {
+ width:100vw;
+ height: 500px;
+ align-items: center;
+justify-content: space-around;
+}
+
 .resizeimage {
  width:50vw;
  height: 350px;
@@ -62,6 +69,17 @@ justify-content: space-around;
   height:400px
 }
 
+.showcardmap{
+  background: white;
+  padding: 30px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+  border-radius: 5px;
+  height: 550px
+}
 
 .showcard{
   background: white;
@@ -73,7 +91,7 @@ justify-content: space-around;
   justify-content: space-around;
   margin: 10px;
   border-radius: 5px;
-  height: 400px
+  height: 100%
 }
 
 .cardcontent{
