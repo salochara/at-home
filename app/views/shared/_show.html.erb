@@ -22,8 +22,9 @@
 
         </p>
 
-        <em><p> <%= @event.location %> </p> </em>
-         <p> <%= @event.date %> </p>
+        <p> <em> <%= @event.location %> </em></p>
+         <p><%= @event.date.to_formatted_s(:long_ordinal)%></p>
+
         <p> <%= @event.description %> </p>
         <div class ="graytext">
         <p>
