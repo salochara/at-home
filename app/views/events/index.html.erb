@@ -1,5 +1,5 @@
 <%= simple_form_for :search, url: results_events_path, method: :get do |f| %>
-  <%= f.input :query, label: false, placeholder: "Search" %>
+  <%= f.input :query, placeholder: "Search", label: false, input_html: { class: 'search-bar' }%>
 <% end %>
 
 <div class="container">
