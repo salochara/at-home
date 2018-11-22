@@ -1,90 +1,51 @@
-
-<div class="container" class= "backgroundtransparent">
 <div class="container">
   <h3>Events <%=@user.name%> is hosting</h3>
-   <div class="container">
     <% @user.events.each do |event| %>
 
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-xs-8">
-          <div class="showcard400px">
-      <div class="cardcontent">
-        <div class="showimg">
-        <img class ="resizeimage"src="https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d892112a159aee439a3bbb23586fa21d&auto=format&fit=crop&w=400&q=60" alt="" class="">
-        </div>
-
-      </div>
-    </div>
-    </div>
-    <div class="col-xs-4">
-      <div class="showcard400px">
-      <div class="cardcontent">
-        <h2> <%=event.title %> </h2>
-        <div class ="graytext">
-
-          ______________________________
-         </div>
-
-        </p>
-
-        <em><p> <%=event.location %> </p> </em>
-         <p> <%=event.date %> </p>
-        <p> <%=event.description %> </p>
-        <div class ="graytext">
-        <p>
-
-          ______________________________
-
-        </p>
-        </div>
-
-
-
-  <!-- <!-- <div class="rowcard">
     <div class="col-xs-8">
           <div class="showcard">
       <div class="cardcontent">
-        <img class= "resizeimage" src="https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d892112a159aee439a3bbb23586fa21d&auto=format&fit=crop&w=400&q=60" alt="" class="">
-
+        <div class="showimg">
+          <%= cl_image_tag(event.photo, height:300)%>
+        </div>
 
 
       </div>
     </div>
     </div>
     <div class="col-xs-4">
-      <p><div class="showcarddashboard">
-     <div class="cardcontent">
-        <h3> <%= event.title %> </h3>
-        <!-- <div class ="graytext">
+      <p><div class="showcard">
+      <div class="cardcontent">
+        <h2> <%= event.title %> </h2>
+        <div class ="graytext">
         <p>
           ______________________________
          </div>
 
-        </p> -->
+        </p>
 
-        <!-- <em><p> <%= event.location %> </p> </em> -->
-        <!-- <p> <%= event.description %> </p> -->
-        <!-- <div class ="graytext">
+        <em><p> <%= event.location %> </p> </em>
+         <p> <%= event.date %> </p>
+        <p> <%= event.description %> </p>
+        <div class ="graytext">
         <p>
 
           ______________________________
 
         </p>
-        </div> -->
+        </div>
 
-        <div>
-              <%= link_to "Edit", edit_event_path(event), class: "btn btn-primary" %>
-              <%= link_to "Destroy", event_path(event), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+        <div class="event-joining">
+              <%= link_to "Edit", edit_event_path(event), class: "btn btn-default" %>
+              <%= link_to "Destroy", event_path(event), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary" %>
             </div>
       <!-- EDIT BUTTON STATIC!-->
     </div>
+  </div>
     </div>
   </div>
-  </div>
-  </div>
-
-
 
     <!-- <div class="container-fluid">
     <div class="col-xs-12 col-sm-6 col-md-4">
@@ -103,18 +64,18 @@
       </div>
       </div> -->
     <% end %>
-  </div>
-<div class="container">
+
   <h3>Events <%=@user.name%> is attending</h3>
     <% @user.attending_events.each do |attending_event| %>
     <div class="container">
         <% Reservation.where(user: current_user, event: attending_event).each do |reservation| %>
+        <div class="container-fluid">
   <div class="row">
     <div class="col-xs-8">
-          <div class="showcard400px">
+          <div class="showcard">
       <div class="cardcontent">
         <div class="showimg">
-        <img class="resizeimage"src="https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d892112a159aee439a3bbb23586fa21d&auto=format&fit=crop&w=400&q=60" alt="" class="">
+        <%= cl_image_tag(attending_event.photo, height:300)%>
         </div>
 
 
@@ -122,7 +83,7 @@
     </div>
     </div>
     <div class="col-xs-4">
-      <p><div class="showcard400px">
+      <p><div class="showcard">
       <div class="cardcontent">
         <h2> <%= reservation.event.title %> </h2>
         <div class ="graytext">
@@ -153,8 +114,5 @@
       <% end %>
     <% end %>
   </div>
+  </div>
 </div>
-</
-
-
-
